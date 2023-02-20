@@ -1,0 +1,12 @@
+body {color:red;
+    background-color: lightgrey;
+    text-align: center;}
+
+a {color: whitesmoke;
+    font-size: 20px;
+    text-decoration: none;}
+
+.navbar { background-color: black;
+        overflow: hidden;}
+
+a.active {background-color: red;}
