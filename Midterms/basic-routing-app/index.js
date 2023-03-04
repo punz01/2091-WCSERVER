@@ -51,6 +51,10 @@ app.post('/', function (req, res, next) {
   res.send(JSON.stringify(req.body));
 });
 
+app.all('*', (req, res) => {
+  res.status(404).sendFile(__dirname + '/' + 'error.html');
+});
+
 app.listen(3000, function () {
   console.log('Server is running on port 3000');
 });
