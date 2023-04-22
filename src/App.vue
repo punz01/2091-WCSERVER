@@ -1,47 +1,41 @@
 <template>
   <div id="app">
-    <h1>{{ msg }}</h1>
-    <h2>MY RESUME</h2>
-    <Profile></Profile>
-    <Skills></Skills>
-    <Education></Education>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">JDM GALLERY</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <router-link class="nav-link active" to="/">Home</router-link>
+            <span class="visually-hidden">(current)</span>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/blog">Blog</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/gallery">Gallery</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/contact">Contact</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/about">About</router-link>
+        </li>
+      </ul>
+    </div>
   </div>
+ </nav>
+    <router-view/>
+  </div>
+
 </template>
 
 <script>
-import Profile from './Profile.vue'
-import Skills from './Skills.vue'
-import Education from './Education.vue'
 export default {
-  name: 'app',
-  components: {
-    Profile,
-    Education,
-    Skills
-  },
-  data () {
-  
-     return {
-      msg: 'Welcome to My Resume'
-    }
-  }
+  name: 'App'
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  background-color: khaki;
-  
-}
-h1{color: red;}
-h2{color:purple;}
-
-
-</style>
